@@ -1,0 +1,11 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    command: ["python3", "app.py"]
+
